@@ -1,6 +1,7 @@
 import streamlit as st 
 import pandas as pd
 from src.investor_comp import load_investor_details
+from src.overall_comp import load_overall_analysis
 
 @st.cache_data
 def get_unique_investors(df):
@@ -21,7 +22,6 @@ if __name__ == "__main__":
 
   if option == "Overall Analysis":
     st.title("Overall Analysis")
-    from src.overall_comp import load_overall_analysis
     load_overall_analysis(df)
       
   elif option == "StartUp":
