@@ -21,6 +21,8 @@ if __name__ == "__main__":
 
   if option == "Overall Analysis":
     st.title("Overall Analysis")
+    from src.overall_comp import load_overall_analysis
+    load_overall_analysis(df)
       
   elif option == "StartUp":
     st.sidebar.subheader("Startup Search")
