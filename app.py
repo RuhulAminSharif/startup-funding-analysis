@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from src.investor_comp import load_investor_details
 from src.overall_comp import load_overall_analysis
+from src.startup_comp import load_startup_analysis
 
 @st.cache_data
 def get_unique_investors(df):
@@ -31,7 +32,7 @@ if __name__ == "__main__":
     btn1 = st.sidebar.button("Find Startup Details")
     
     if btn1:
-      st.title(f"Analysis for {selected_startup}")
+      load_startup_analysis(df, selected_startup)
 
   else:
     st.sidebar.subheader("Investor Search")
